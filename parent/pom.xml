@@ -17,7 +17,7 @@
   	<module>babasport-portal</module>
   	<module>babasport-login</module>
   </modules>
-  <!-- 配置maven项目编译插件，即jdk -->
+ <!-- 配置maven项目编译插件，即jdk -->
 	<build>
 		<plugins>
 			<plugin>
@@ -33,9 +33,7 @@
 		</plugins>
 	</build>
 
-
-
-<!-- 设置统一控制版本 -->
+	<!-- 设置统一控制版本 -->
 	<properties>
 		<java-version>1.7</java-version>
 		<junit-version>4.12</junit-version>
@@ -64,7 +62,7 @@
 
 
 
-<!-- 依赖管理 版本号 -->
+	<!-- 依赖管理 版本号 -->
 	<!-- 设置统一依赖管理、不强行依赖 -->
 	<dependencyManagement>
 		<dependencies>
@@ -323,10 +321,8 @@
 			<!-- Active MQ 结束 -->
 		</dependencies>
 	</dependencyManagement>
-
-
-
-<!-- 配置tomcat插件 -->
+	
+	<!-- 配置tomcat插件 -->
 	<dependencies>
 		<!-- Tomcat7 servlet-api -->
 		<dependency>
@@ -335,5 +331,4 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-  
 </project>
