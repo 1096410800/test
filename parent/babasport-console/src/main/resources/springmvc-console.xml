@@ -29,7 +29,15 @@
 			1、匹配最新的版本
 			2、加载类型转换器、校验器validation、json解析器
 	 -->
-	<mvc:annotation-driven/>
+	<mvc:annotation-driven conversion-service="conversionService"/>
+	<!-- 自定义类型转换器 -->
+	<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+		<property name="converters">
+			<set>
+				<bean class="com.itheima.babasport.utils.converter.CostomParamsConverter"/>
+			</set>
+		</property>
+	</bean>
 	
 	<!-- 配置视图解析器：ViewResolver -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
