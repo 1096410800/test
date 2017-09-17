@@ -36,5 +36,6 @@
 	<dubbo:service ref="bbsTestService" interface="com.itheima.babasport.service.test.BbsTestService"/>
 	<dubbo:service ref="brandService" interface="com.itheima.babasport.service.brand.BrandService"/>
 	<dubbo:service ref="uploadService" interface="com.itheima.babasport.service.upload.UploadService"/>	
+	<dubbo:service ref="productService" interface="com.itheima.babasport.service.product.ProductService"/>	
 		
 </beans>
