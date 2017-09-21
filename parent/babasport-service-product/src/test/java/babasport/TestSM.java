@@ -1,9 +1,14 @@
 package babasport;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.Date;
 
 import javax.annotation.Resource;
 
+import org.apache.solr.client.solrj.SolrServer;
+import org.apache.solr.client.solrj.SolrServerException;
+import org.apache.solr.common.SolrInputDocument;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,7 +42,18 @@ public class TestSM {
 	private BbsTestMapper mapper;
 	@Resource
 	private BbsTestService service;
-//	
+	
+	@Resource
+	private SolrServer solrServer;
+	@Test
+	public void testSolrServer() throws SolrServerException, IOException{
+		SolrInputDocument doc = new SolrInputDocument();
+		doc.addField("id", "1");
+		doc.addField("name_ik", "spring整合solr");
+		solrServer.add(doc);
+		solrServer.commit();
+	}
+
 	/**
 	 * 测试mybatis
 	 */
