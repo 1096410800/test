@@ -51,8 +51,8 @@ $(function(){
 						</div>
 						<div class="mc">
 							<div class="form">
-								<form id="loginForm" action="/shopping/login.aspx" method="post">
-									<input type="hidden" name="returnUrl" value="${param.returnUrl }"/>
+								<form id="loginForm" action="/login.aspx" method="post">
+									<input type="hidden" name="ReturnUrl" value="${param.ReturnUrl }"/>
 									<div class="item item-fore1">
 										<label for="loginname" class="login-label name-label"></label>
 										<input class="itxt" name="username"
